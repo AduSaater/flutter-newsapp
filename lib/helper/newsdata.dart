@@ -7,7 +7,7 @@ class News {
 
   Future<void> getNews() async {
     var response = await get(Uri.parse(
-        'http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=7ec95bfdb5804b84bb0dc782e9c58ea6'));
+        'http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=7ec95bfdb5804b84bb0dc782e9c58ea0'));
     var jsonData = jsonDecode(response.body);
     if (jsonData['status'] == 'ok') {
       jsonData['articles'].forEach((element) {
